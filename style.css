@@ -1,1 +1,73 @@
-/* Add styles here */
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.numbers {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#generate {
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#generate:hover {
+  background-color: #00f2fe;
+}
+
+#test-results {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f0f0f0;
+}
+
+.test-result {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.test-result.success {
+  color: green;
+}
+
+.test-result.failure {
+  color: red;
+}
