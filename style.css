@@ -48,9 +48,29 @@ h1 {
   transition: background-color 0.2s;
 }
 
-#generate:hover {
-  background-color: #00f2fe;
+.probabilities {
+  margin-top: 2rem;
+  text-align: left;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
 }
+
+.probabilities h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.probabilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.probabilities li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
 
 #test-results {
   margin-top: 2rem;

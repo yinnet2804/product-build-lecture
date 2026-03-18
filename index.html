@@ -11,6 +11,17 @@
     <h1>Lotto Number Generator</h1>
     <div class="numbers"></div>
     <button id="generate">Generate Numbers</button>
+
+    <div class="probabilities">
+      <h2>당첨 확률 (Winning Probabilities)</h2>
+      <ul>
+        <li>1등 (6개 일치): 1 / 8,145,060</li>
+        <li>2등 (5개 + 보너스 일치): 1 / 1,357,510</li>
+        <li>3등 (5개 일치): 1 / 34,808</li>
+        <li>4등 (4개 일치): 1 / 733</li>
+        <li>5등 (3개 일치): 1 / 45</li>
+      </ul>
+    </div>
   </div>
 
   <div id="test-container">
@@ -73,6 +84,13 @@
           generateBtn.click(); // second generation
           const numberDivs = document.querySelectorAll(".number");
           assert(numberDivs.length === 6, `Expected 6 numbers after second generation, but got ${numberDivs.length}`);
+        },
+        "should display the winning probabilities section": () => {
+          const probabilitiesSection = document.querySelector(".probabilities");
+          assert(probabilitiesSection !== null, "Probabilities section should exist");
+          const listItems = probabilitiesSection.querySelectorAll("li");
+          assert(listItems.length === 5, `Expected 5 probability items, but got ${listItems.length}`);
+          assert(listItems[0].textContent.includes("1/8,145,060") || listItems[0].textContent.includes("1 / 8,145,060"), "1st prize probability should be correct");
         }
       };
 
